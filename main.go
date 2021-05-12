@@ -3,31 +3,31 @@ package main
 import "fmt"
 
 func main() {
-	age := 35
-	name := "shaun"
+	// var ages [3]int = [3]int{20, 25, 30}
+	var ages = [3]int{20, 25, 30}
 
-	// Print
-	fmt.Print("hello, ")
-	fmt.Print("world! \n")
-	fmt.Print("new line \n")
+	names := [4]string{"yoshi", "mario", "peach", "bowser"}
+	names[1] = "luigi"
 
-	// Println
-	fmt.Println("hello ninjas!")
-	fmt.Println("goodbye ninjas!")
-	fmt.Println("my age is", age, "and my name is", name)
+	fmt.Println(ages, len(ages))
+	fmt.Println(names, len(names))
 
-	// Printf (formatted string), %_ = format specifier
-	fmt.Printf("my age is %v and my name is %v \n", age, name) // %v = value in default format
-	fmt.Printf("my age is %q and my name is %q \n", age, name) // %q = quotes
-	fmt.Printf("age is of type %T \n", age)                    // %T is the type
-	fmt.Printf("you scored %f points! \n", 225.55)             // %f = float format
-	fmt.Printf("you scored %0.1f points! \n", 225.55)          // %0.2f = float with 2 decimal points
+	// slices (use arrays under the hood)
+	var scores = []int{100, 50, 60}
+	scores[2] = 25
+	scores = append(scores, 85)
 
-	// Sprintf (save formatted strings)
-	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
-	fmt.Println("the saved string is:", str)
+	fmt.Println(scores, len(scores))
 
-	// see more format specifiers here:
-	// https://golang.org/pkg/fmt/
+	// slice ranges
+	rangeOne := names[1:4] // doesn't include pos 4 element
+	rangeTwo := names[2:]  //includes the last element
+	rangeThree := names[:3]
+
+	fmt.Println(rangeOne, rangeTwo, rangeThree)
+	fmt.Printf("the type of rangeOne is %T \n", rangeOne)
+
+	rangeOne = append(rangeOne, "koopa")
+	fmt.Println(rangeOne)
 
 }
