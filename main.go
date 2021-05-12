@@ -58,7 +58,8 @@ func promptOptions(b bill) {
 		fmt.Println("tip has been updated to", tip)
 		promptOptions(b)
 	case "s":
-		fmt.Println("you chose to save the bill", b)
+		b.save()
+		fmt.Println("bill has been saved as", b.name)
 	default:
 		fmt.Println("That was not a valid option...")
 		promptOptions(b)
