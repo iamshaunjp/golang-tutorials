@@ -1,33 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
 
 func main() {
-	// var ages [3]int = [3]int{20, 25, 30}
-	var ages = [3]int{20, 25, 30}
+	greeting := "hello there friends!"
 
-	names := [4]string{"yoshi", "mario", "peach", "bowser"}
-	names[1] = "luigi"
+	fmt.Println(strings.Contains(greeting, "hello"))
+	fmt.Println(strings.Contains(greeting, "bye"))
+	fmt.Println(strings.ReplaceAll(greeting, "hello", "hi"))
+	fmt.Println(strings.ToUpper(greeting))
+	fmt.Println(strings.Index(greeting, "ll"))
+	fmt.Println(strings.Split(greeting, " "))
 
-	fmt.Println(ages, len(ages))
-	fmt.Println(names, len(names))
+	// the original value is unchanged
+	fmt.Println("original string value =", greeting)
 
-	// slices (use arrays under the hood)
-	var scores = []int{100, 50, 60}
-	scores[2] = 25
-	scores = append(scores, 85)
+	ages := []int{45, 20, 35, 30, 75, 60, 50, 25}
 
-	fmt.Println(scores, len(scores))
+	sort.Ints(ages)
+	fmt.Println(ages)
 
-	// slice ranges
-	rangeOne := names[1:4] // doesn't include pos 4 element
-	rangeTwo := names[2:]  //includes the last element
-	rangeThree := names[:3]
+	index := sort.SearchInts(ages, 30)
+	fmt.Println(index)
 
-	fmt.Println(rangeOne, rangeTwo, rangeThree)
-	fmt.Printf("the type of rangeOne is %T \n", rangeOne)
+	names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
 
-	rangeOne = append(rangeOne, "koopa")
-	fmt.Println(rangeOne)
+	sort.Strings(names)
+	fmt.Println(names)
+
+	fmt.Println(sort.SearchStrings(names, "bowser"))
 
 }
