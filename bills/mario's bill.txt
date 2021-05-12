@@ -1,5 +1,0 @@
-Bill breakdown:
-pie:                      ...$10.95
-ice cream:                ...$4.99
-tip:                      ...$5
-total:                    ...$20.94
