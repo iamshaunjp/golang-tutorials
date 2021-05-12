@@ -10,6 +10,7 @@ func main() {
 	mybill.addItem("toffee pudding", 4.95)
 	mybill.addItem("coffee", 3.25)
 
-	fmt.Println(mybill.format())
+	mybill.updateTip(10)
 
+	fmt.Println(mybill.format())
 }
