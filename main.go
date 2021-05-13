@@ -24,7 +24,7 @@ func main() {
 
 	fmt.Println(name)
 
-	// reference types -> slices, maps, functions, pointers
+	// "reference" types -> slices, maps, functions, pointers
 	menu := map[string]float64{
 		"pie":       5.95,
 		"ice cream": 3.99,
