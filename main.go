@@ -17,7 +17,7 @@ func updateMenu(y map[string]float64) {
 
 func main() {
 	// group A types -> strings, ints, bools, floats, arrays, structs
-	// single memory box types
+	// non-pointer wrapper values
 	name := "tifa"
 
 	// updateName(name)
@@ -26,7 +26,7 @@ func main() {
 	fmt.Println(name)
 
 	// group B types -> slices, maps, functions
-	// multiple memory box types
+	// pointer wrapper values
 	menu := map[string]float64{
 		"pie":       5.95,
 		"ice cream": 3.99,
