@@ -25,7 +25,7 @@ func main() {
 
 	fmt.Println(name)
 
-	// group B types -> slices, maps, functions, pointers, channels
+	// group B types -> slices, maps, functions
 	// multiple memory box types
 	menu := map[string]float64{
 		"pie":       5.95,
