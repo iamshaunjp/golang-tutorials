@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("memory address:", m)
 	fmt.Println("value at memory address:", *m)
 
-	updateName(&name) // using pointer as arg
+	updateName(m) // using pointer as arg, can pass &name directly instead of "m" as well
 	fmt.Println(name)
 
 }
