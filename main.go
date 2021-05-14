@@ -16,7 +16,8 @@ func updateMenu(y map[string]float64) {
 }
 
 func main() {
-	// value types -> strings, ints, bools, floats, arrays, structs
+	// group A types -> strings, ints, bools, floats, arrays, structs
+	// single memory box types
 	name := "tifa"
 
 	// updateName(name)
@@ -24,7 +25,8 @@ func main() {
 
 	fmt.Println(name)
 
-	// "reference" types -> slices, maps, functions, pointers
+	// group B types -> slices, maps, functions, pointers, channels
+	// multiple memory box types
 	menu := map[string]float64{
 		"pie":       5.95,
 		"ice cream": 3.99,
