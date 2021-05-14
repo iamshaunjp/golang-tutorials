@@ -11,7 +11,6 @@ func updateName(n *string) {
 }
 
 func main() {
-	// value types -> strings, ints, bools, floats, arrays, structs
 	name := "tifa"
 
 	// updateName(name)
