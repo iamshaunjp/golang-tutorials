@@ -59,5 +59,5 @@ func (b *bill) save() {
 	if err != nil {
 		panic(err)
 	}
-	println("Bill saved to file")
+	fmt.Println("Bill saved to file")
 }
