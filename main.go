@@ -38,7 +38,7 @@ func promptOptions(b bill) {
 
 		p, err := strconv.ParseFloat(price, 64)
 		if err != nil {
-			println("The price must be a number...")
+			fmt.Println("The price must be a number...")
 			promptOptions(b)
 		}
 		b.addItem(name, p)
@@ -50,7 +50,7 @@ func promptOptions(b bill) {
 
 		t, err := strconv.ParseFloat(tip, 64)
 		if err != nil {
-			println("The tip must be a number...")
+			fmt.Println("The tip must be a number...")
 			promptOptions(b)
 		}
 		b.updateTip(t)
